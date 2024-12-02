@@ -1,0 +1,14 @@
+const CONFIG = {
+  FRONTEND_DOMAIN: process.env.FRONTEND_DOMAIN,
+  PASSWORD_SALT: process.env.PASSWORD_SALT
+    ? parseInt(process.env.PASSWORD_SALT)
+    : 10,
+  JWT_SECRET: process.env.JWT_SECRET || "secret",
+  JWT_EXPIRY: process.env.JWT_EXPIRY,
+  JWT_EXPIRY_REFRESH: process.env.JWT_EXPIRY_REFRESH,
+  FRONTEND_DOMAIN_COOKIE: process.env.FRONTEND_DOMAIN_COOKIE,
+  COOKIE_EXPIRY: process.env.COOKIE_EXPIRY || "86400000",
+  COOKIE_EXPIRY_REFRESH: process.env.COOKIE_EXPIRY_REFRESH || "2592000000",
+};
+
+export default CONFIG;
